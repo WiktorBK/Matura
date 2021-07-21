@@ -81,3 +81,16 @@ def czy_anagram(s1, s2):
     s1 , s2 = s1.replace(" ", "").lower(), s2.replace(" ", "").lower()
     return sorted(s1) == sorted(s2)
 
+########################################################################
+
+#rozklada liczbe na czynniki pierwsze
+def rozloz(n):
+    czynniki = []
+    k = 2
+    while n != 1:
+        while n % k == 0:
+            n //= k
+            czynniki.append(k)
+        k +=1
+    return czynniki
+
