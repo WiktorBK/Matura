@@ -77,4 +77,7 @@ def czy_palindrom(s):
 #Sprawdza czy podane dwie wartosci sa anagramami
 
 def czy_anagram(s1, s2):
- pass
+    s1, s2 = str(s1), str(s2)
+    s1 , s2 = s1.replace(" ", "").lower(), s2.replace(" ", "").lower()
+    return sorted(s1) == sorted(s2)
+
