@@ -94,3 +94,15 @@ def rozloz(n):
         k +=1
     return czynniki
 
+###############################################################################
+
+#szyfruje napis szyfrem cezara
+
+def szyfr_cezara(s, n):
+    szyfr = ""
+    for i in range(len(s)):
+        liczba = ord(s[i])  # zapisuje dana literke z napisu w postaci liczby
+        szyfr += chr(liczba + n)
+    return szyfr
+
+###############################################################################
